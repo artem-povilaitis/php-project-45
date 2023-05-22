@@ -1,0 +1,22 @@
+{
+    "name": "hexlet/code",
+    "description": "its edu project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artem Povilaitis"
+        }
+    ],
+    "require": {},
+    
+    "bin": [
+        "bin/brain-games"
+      ]
+    
+    
+    
+}
