@@ -1,5 +1,7 @@
+#!/usr/bin/env php
 <?php
 
-#!/usr/bin/env php
+include_once('./vendor/autoload.php');
+require_once './src/Cli.php';
 
-print_r('Welcome to the Brain Games!');
+BrainGames\Cli\helloUser();
