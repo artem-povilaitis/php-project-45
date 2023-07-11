@@ -14,3 +14,6 @@ lintfix:
 
 brain-games:
 	./bin/brain-games
+
+test:
+	./bin/brain-even

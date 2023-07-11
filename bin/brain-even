@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+
+include_once('./vendor/autoload.php');
+require_once './src/games/brainEven.php';
+
+BrainGames\games\brainEven\brainEven($name);

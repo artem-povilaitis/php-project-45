@@ -3,5 +3,7 @@
 
 include_once('./vendor/autoload.php');
 require_once './src/Cli.php';
+global $name;
+$name = BrainGames\Cli\helloUser();
 
-BrainGames\Cli\helloUser();
+require_once 'brain-even';
