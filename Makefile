@@ -5,6 +5,8 @@ install:
 
 validate:
 	composer validate
+	composer install
+	install validate
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
