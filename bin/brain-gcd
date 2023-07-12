@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+include_once('./vendor/autoload.php');
+require_once './src/games/brainGcd.php';
+
+require_once 'brain-games';
+
+BrainGames\games\brainGcd\brainGcd($name);
