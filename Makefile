@@ -1,6 +1,5 @@
-setup:
-composer install
-composer validate
+setup: 
+	install validate
 
 install:
 	composer install
@@ -16,6 +15,12 @@ lintfix:
 
 brain-games:
 	./bin/brain-games
+
+brain-even:
+	./bin/brain-even
+
+brain-calc:
+	./bin/brain-calc
 
 test:
 	./bin/brain-even

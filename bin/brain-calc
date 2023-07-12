@@ -2,8 +2,8 @@
 <?php
 
 include_once('./vendor/autoload.php');
-require_once './src/games/brainEven.php';
+require_once './src/games/brainCalc.php';
 
 require_once 'brain-games';
 
-BrainGames\games\brainEven\brainEven($name);
+BrainGames\games\brainCalc\brainCalc($name);
