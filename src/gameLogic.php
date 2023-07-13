@@ -8,7 +8,7 @@ use function cli\prompt;
 
 function yesOrNo($word)
 {
-    $word = mb_strtolower($word);
+    //$word = mb_strtolower($word);
     if ($word === 'yes') {
         return true;
     }
