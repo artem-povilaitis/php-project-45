@@ -3,6 +3,7 @@ setup:
 
 install:
 	composer install
+	composer update
 
 build:
 	composer install
