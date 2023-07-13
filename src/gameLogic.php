@@ -32,7 +32,7 @@ function answerIsCorrect()
 
 function printYourAnswer()
 {
-    return prompt('Your answer: ');
+    return prompt('Your answer');
 }
 
 function win($name)
