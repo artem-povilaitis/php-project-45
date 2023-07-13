@@ -1,12 +1,12 @@
 #!/usr/bin/env php
 <?php
- 
+
 namespace BrainGames\games\brainProgression;
- 
+
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\gameLogic\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
- 
+
 function createProgression()
 {
     $step = rand(1, 15);
@@ -24,7 +24,7 @@ function takeRandomElement(&$progression)
 {
     $keyOfElement = array_rand($progression);
     $answer = $progression[$keyOfElement];
-    $progression[$keyOfElement] = '..'; 
+    $progression[$keyOfElement] = '..';
     return $answer;
 }
 
@@ -32,7 +32,7 @@ function brainProgression($name = 'examplenmame')
 {
     line('What number is missing in the progression?');
 
-    $correctAnswers = 0; 
+    $correctAnswers = 0;
     while ($correctAnswers < 3) {
         $progression = createProgression();
         $correctAnswer = takeRandomElement($progression);
@@ -48,8 +48,6 @@ function brainProgression($name = 'examplenmame')
             answerIsWrong($userAsnswer, $correctAnswer, $name);
             return false;
         }
-
     }
     win($name);
-
 }
