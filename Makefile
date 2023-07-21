@@ -1,13 +1,8 @@
-setup: 
-	install validate
-
 install:
 	composer install
-	composer update
 
 build:
 	composer install
-	composer validate
 
 validate:
 	composer validate
@@ -35,6 +30,3 @@ brain-progression:
 	
 brain-prime:
 	./bin/brain-prime
-
-test:
-	./bin/brain-even
