@@ -5,9 +5,9 @@ namespace BrainGames\games\brainProgression;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\gameLogic\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
 
-function createProgression()
+function runProgression()
 {
     $step = rand(1, 15);
     $currentElement = rand(1, 50);

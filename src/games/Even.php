@@ -5,14 +5,14 @@ namespace BrainGames\games\brainEven;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\gameLogic\{yesOrNo, answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\{yesOrNo, answerIsCorrect, answerIsWrong, printYourAnswer, win};
 
 function isEven($number)
 {
     return $number % 2 ? false : true;
 }
 
-function brainEven($name = 'examplename')
+function runEven($name = 'examplename')
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
 

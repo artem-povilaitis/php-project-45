@@ -5,7 +5,7 @@ namespace BrainGames\games\brainPrime;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\gameLogic\{yesOrNo, answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\{yesOrNo, answerIsCorrect, answerIsWrong, printYourAnswer, win};
 
 function createPrimeNumbers()
 {
@@ -13,7 +13,7 @@ function createPrimeNumbers()
     return $primes;
 }
 
-function brainPrime($name)
+function runPrime($name)
 {
     line('Answer "yes" if the number is prime, otherwise answer "no".');
 

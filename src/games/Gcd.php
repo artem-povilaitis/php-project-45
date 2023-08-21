@@ -5,7 +5,7 @@ namespace BrainGames\games\brainGcd;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\gameLogic\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
 
 function gcd($x, $y)
 {
@@ -15,7 +15,7 @@ function gcd($x, $y)
     return gcd($y, $x % $y);
 }
 
-function brainGcd($name)
+function runGcd($name)
 {
     line('Find the greatest common divisor of given numbers.');
 
