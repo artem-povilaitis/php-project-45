@@ -13,11 +13,11 @@ Install:
 3. make install
 4. Launch any of the five games
 
-    make brain-even
-    make brain-calc
-    make brain-gcd
-    make brain progression
-    make brain-prime
+ - make brain-even
+ - make brain-calc
+ - make brain-gcd
+ - make brain progression
+ - make brain-prime
 
 
 [![asciicast](https://asciinema.org/a/cjMXQyuvv8Lnfu18FpzDcPozl.svg)](https://asciinema.org/a/cjMXQyuvv8Lnfu18FpzDcPozl)
