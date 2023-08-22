@@ -28,12 +28,10 @@ function sayQuestion(string $question)
 
 function yesOrNo(bool $bool)
 {
-    if ($bool == true) {
+    if ($bool === true) {
         return 'yes';
     }
-    if ($bool == false) {
-        return 'no';
-    }
+    return 'no';
 }
 
 function answerIsWrong(string $wrongAnswer, string $correctAnswer, string $name)
