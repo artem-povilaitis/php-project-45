@@ -8,11 +8,11 @@
         "files": [
             "src/Engine.php",
             "src/Cli.php",
-            "src/Games/Even.php",
-            "src/Games/Gcd.php",
-            "src/Games/Progression.php",
-            "src/Games/Prime.php",
-            "src/Games/Calc.php"
+            "src/games/Even.php",
+            "src/games/Gcd.php",
+            "src/games/Progression.php",
+            "src/games/Prime.php",
+            "src/games/Calc.php"
         ]
         
     },

@@ -19,9 +19,8 @@ function createEvenRound()
 
     $output = [];
     $output['question'] = $number;
-    $output['correctAnswer']= yesOrNo(isEven($number));
+    $output['correctAnswer'] = yesOrNo(isEven($number));
     return $output;
-        
 }
 
 function runEvenGame()
@@ -33,6 +32,3 @@ function runEvenGame()
     }
     playGame($gameData, $gameRules);
 }
-
-
-

@@ -6,6 +6,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\games\Calc\runCalcRound;
+
 // include '.src/games/Calc.php';
 
 const ROUNDS_COUNT = 3;
@@ -84,7 +85,7 @@ function playGame(array $gameData, string $gameRules)
         $userAnswer = printYourAnswer();
         if ($userAnswer != $correctAnswer) {
             answerIsWrong($userAnswer, $correctAnswer, $name);
-            return null;            
+            return null;
         }
         answerIsCorrect();
     }

@@ -29,9 +29,8 @@ function createCalcRound()
     $arithmeticSymbol = $arithmeticSymbols[array_rand($arithmeticSymbols)];
     $output = [];
     $output['question'] = $a . ' ' . $arithmeticSymbol . ' ' . $b;
-    $output['correctAnswer']= calc($a, $b, $arithmeticSymbol);
+    $output['correctAnswer'] = calc($a, $b, $arithmeticSymbol);
     return $output;
-        
 }
 
 function runCalcGame()
@@ -43,7 +42,3 @@ function runCalcGame()
     }
     playGame($gameData, $gameRules);
 }
-
-
-
-

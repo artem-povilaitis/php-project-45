@@ -4,6 +4,7 @@
 namespace BrainGames\games\Prime;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+
 use function BrainGames\Engine\{yesOrNo, playGame};
 
 function createPrimeNumbers()
@@ -33,7 +34,6 @@ function createPrimeRound()
     $output['question'] = $number;
     $output['correctAnswer'] = yesOrNo(in_array($number, $primes));
     return $output;
-        
 }
 
 

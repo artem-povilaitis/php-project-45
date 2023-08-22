@@ -4,6 +4,7 @@
 namespace BrainGames\games\progression;
 
 use function BrainGames\Engine\playGame;
+
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 function runProgressionGame()
@@ -50,5 +51,4 @@ function createProgressionRound()
     $output['question'] = $outputString;
     $output['correctAnswer'] = $correctAnswer;
     return $output;
-        
 }

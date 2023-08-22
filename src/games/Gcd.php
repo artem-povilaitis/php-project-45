@@ -4,8 +4,8 @@
 namespace BrainGames\games\gcd;
 
 use function BrainGames\Engine\playGame;
-use const BrainGames\Engine\ROUNDS_COUNT;
 
+use const BrainGames\Engine\ROUNDS_COUNT;
 
 function gcd($x, $y)
 {
@@ -31,8 +31,6 @@ function createGcdRound()
     $b = rand(1, 100);
     $output = [];
     $output['question'] = $a . ' ' . $b;
-    $output['correctAnswer']= gcd($a, $b);
+    $output['correctAnswer'] = gcd($a, $b);
     return $output;
-        
 }
-
