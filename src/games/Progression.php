@@ -30,7 +30,7 @@ function createProgression()
     return $progression;
 }
 
-function takeRandomElement(&$progression)
+function takeRandomElement(array &$progression)
 {
     $keyOfElement = array_rand($progression);
     $answer = $progression[$keyOfElement];
