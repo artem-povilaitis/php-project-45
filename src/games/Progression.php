@@ -1,13 +1,22 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\games\brainProgression;
+namespace BrainGames\games\progression;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\playGame;
+use const BrainGames\Engine\ROUNDS_COUNT;
 
-function runProgression()
+function runProgressionGame()
+{
+    $gameData = [];
+    $gameRules = 'What number is missing in the progression?';
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $gameData[$i] = createProgressionRound();
+    }
+    playGame($gameData, $gameRules);
+}
+
+function createProgression()
 {
     $step = rand(1, 15);
     $currentElement = rand(1, 50);
@@ -28,26 +37,18 @@ function takeRandomElement(&$progression)
     return $answer;
 }
 
-function brainProgression($name = 'examplenmame')
+function createProgressionRound()
 {
-    line('What number is missing in the progression?');
 
-    $correctAnswers = 0;
-    while ($correctAnswers < 3) {
-        $progression = createProgression();
-        $correctAnswer = takeRandomElement($progression);
-        $outputString = implode(' ', $progression);
-        line("Question: %s", $outputString);
+    $progression = createProgression();
+    $correctAnswer = takeRandomElement($progression);
+    $outputString = implode(' ', $progression);
 
-        $userAsnswer = printYourAnswer();
+    $output = [];
 
-        if ($correctAnswer == $userAsnswer) {
-            answerIsCorrect();
-            $correctAnswers++;
-        } else {
-            answerIsWrong($userAsnswer, $correctAnswer, $name);
-            return false;
-        }
-    }
-    win($name);
+
+    $output['question'] = $outputString;
+    $output['correctAnswer'] = $correctAnswer;
+    return $output;
+        
 }

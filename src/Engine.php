@@ -28,16 +28,17 @@ function sayQuestion($question)
     line("Question: %s", $question);
 }
 
-function yesOrNo($word)
+function yesOrNo($bool)
 {
 
     //$word = mb_strtolower($word);
-    if ($word === 'yes') {
-        return true;
+    if ($bool === true) {
+        return 'yes';
     }
-    if ($word === 'no') {
-        return false;
+    if ($bool === false) {
+        return 'no';
     }
+    return 'null';
 
     return null;
 }

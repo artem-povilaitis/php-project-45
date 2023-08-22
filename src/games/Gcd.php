@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\games\brainGcd;
+namespace BrainGames\games\gcd;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\{answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use function BrainGames\Engine\playGame;
+use const BrainGames\Engine\ROUNDS_COUNT;
+
 
 function gcd($x, $y)
 {
@@ -15,26 +15,24 @@ function gcd($x, $y)
     return gcd($y, $x % $y);
 }
 
-function runGcd($name)
+function runGcdGame()
 {
-    line('Find the greatest common divisor of given numbers.');
-
-    $correctAnswers = 0;
-    while ($correctAnswers < 3) {
-        $a = rand(1, 100);
-        $b = rand(1, 100);
-        Line("Question: %s %s", $a, $b);
-
-        $correctAnswer = gcd($a, $b);
-        $userAsnswer = printYourAnswer();
-
-        if ($correctAnswer == $userAsnswer) {
-            answerIsCorrect();
-            $correctAnswers++;
-        } else {
-            answerIsWrong($userAsnswer, $correctAnswer, $name);
-            return false;
-        }
+    $gameData = [];
+    $gameRules = 'Find the greatest common divisor of given numbers.';
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $gameData[$i] = createGcdRound();
     }
-    win($name);
+    playGame($gameData, $gameRules);
 }
+function createGcdRound()
+{
+
+    $a = rand(1, 100);
+    $b = rand(1, 100);
+    $output = [];
+    $output['question'] = $a . ' ' . $b;
+    $output['correctAnswer']= gcd($a, $b);
+    return $output;
+        
+}
+

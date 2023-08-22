@@ -1,36 +1,38 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\games\brainEven;
+namespace BrainGames\games\Even;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\{yesOrNo, answerIsCorrect, answerIsWrong, printYourAnswer, win};
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+use function BrainGames\Engine\{yesOrNo, playGame};
 
 function isEven($number)
 {
     return $number % 2 ? false : true;
 }
 
-function runEven($name = 'examplename')
+
+function createEvenRound()
 {
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $number = rand(1, 100);
 
-    $correctAnswers = 0;
-    while ($correctAnswers < 3) {
-        $number = rand(1, 100);
-        line("Question: %s", $number);
-        $answer = printYourAnswer();
-
-
-        if (isEven($number) === yesOrNo($answer)) {
-            answerIsCorrect();
-            $correctAnswers++;
-        } else {
-            $correctAnswer = isEven($number) ? 'yes' : 'no';
-            answerIsWrong($answer, $correctAnswer, $name);
-            return false;
-        }
-    }
-    win($name);
+    $output = [];
+    $output['question'] = $number;
+    $output['correctAnswer']= yesOrNo(isEven($number));
+    return $output;
+        
 }
+
+function runEvenGame()
+{
+    $gameData = [];
+    $gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $gameData[$i] = createEvenRound();
+    }
+    playGame($gameData, $gameRules);
+}
+
+
+

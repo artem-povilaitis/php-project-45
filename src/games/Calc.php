@@ -38,7 +38,7 @@ function runCalcGame()
 {
     $gameData = [];
     $gameRules = 'What is the result of the expression?';
-    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $gameData[$i] = createCalcRound();
     }
     playGame($gameData, $gameRules);
