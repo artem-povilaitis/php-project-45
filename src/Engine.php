@@ -8,7 +8,7 @@ use function cli\prompt;
 use function BrainGames\games\Calc\runCalcRound;
 // include '.src/games/Calc.php';
 
-const ROUNDS_COUNT = 1;
+const ROUNDS_COUNT = 3;
 
 function sayHello()
 {
