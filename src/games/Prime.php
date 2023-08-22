@@ -17,7 +17,7 @@ function createPrimeNumbers()
 function runPrimeGame()
 {
     $gameData = [];
-    $gameRules = 'Answer "yes" if the number is prime, otherwise answer "no".';
+    $gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $gameData[$i] = createPrimeRound();
     }
