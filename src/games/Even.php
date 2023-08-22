@@ -7,9 +7,13 @@ use function BrainGames\Engine\{yesOrNo, playGame};
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function isEven($number)
+function isEven(int $number)
 {
-    return $number % 2 ? false : true;
+    if ($number % 2 === 0) {
+        return true;
+    } else{
+        return false;
+    }
 }
 
 

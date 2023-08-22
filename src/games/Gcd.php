@@ -7,7 +7,7 @@ use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function gcd($x, $y)
+function gcd(int $x, int $y)
 {
     if ($y == 0) {
         return $x;

@@ -7,7 +7,7 @@ use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function calc($a, $b, $arithmeticSymbol)
+function calc(int $a, int $b, string $arithmeticSymbol)
 {
     if ($arithmeticSymbol === '+') {
         return $a + $b;
