@@ -59,7 +59,7 @@ function printYourAnswer()
 
 function win($name)
 {
-    line('Congratulations, %s', $name);
+    line('Congratulations, %s!', $name);
 }
 
 function beginGame($gameRules)
