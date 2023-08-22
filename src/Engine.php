@@ -5,7 +5,6 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\games\Calc\runCalcRound;
 
 const ROUNDS_COUNT = 3;
 
@@ -17,17 +16,17 @@ function sayHello()
     return $name;
 }
 
-function sayRules($gameRules)
+function sayRules(string $gameRules)
 {
     line($gameRules);
 }
 
-function sayQuestion($question)
+function sayQuestion(string $question)
 {
     line("Question: %s", $question);
 }
 
-function yesOrNo($bool)
+function yesOrNo(bool $bool)
 {
     if ($bool === true) {
         return 'yes';
@@ -36,12 +35,9 @@ function yesOrNo($bool)
         return 'no';
     }
     return 'null';
-
-    return null;
 }
 
-
-function answerIsWrong($wrongAnswer, $correctAnswer, $name)
+function answerIsWrong(string $wrongAnswer, string $correctAnswer, $name)
 {
     line("'%s' is wrong answer ;(. Correct answer was '%s'", $wrongAnswer, $correctAnswer);
     line(" Let's try again, %s!", $name);
@@ -57,12 +53,12 @@ function printYourAnswer()
     return prompt('Your answer');
 }
 
-function win($name)
+function win(string $name)
 {
     line('Congratulations, %s!', $name);
 }
 
-function beginGame($gameRules)
+function beginGame(string $gameRules)
 {
     $name = sayHello();
     sayRules($gameRules);

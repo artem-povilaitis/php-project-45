@@ -32,6 +32,6 @@ function createPrimeRound()
     $primes = createPrimeNumbers();
 
     $output['question'] = $number;
-    $output['correctAnswer'] = yesOrNo(in_array($number, $primes, false));
+    $output['correctAnswer'] = yesOrNo(in_array($number, $primes, true));
     return $output;
 }
