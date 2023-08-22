@@ -3,9 +3,9 @@
 
 namespace BrainGames\games\Calc;
 
-use const BrainGames\Engine\ROUNDS_COUNT;
-
 use function BrainGames\Engine\playGame;
+
+use const BrainGames\Engine\ROUNDS_COUNT;
 
 function calc($a, $b, $arithmeticSymbol)
 {

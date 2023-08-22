@@ -3,9 +3,9 @@
 
 namespace BrainGames\games\Even;
 
-use const BrainGames\Engine\ROUNDS_COUNT;
-
 use function BrainGames\Engine\{yesOrNo, playGame};
+
+use const BrainGames\Engine\ROUNDS_COUNT;
 
 function isEven($number)
 {

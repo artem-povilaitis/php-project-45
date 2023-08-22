@@ -7,8 +7,6 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\games\Calc\runCalcRound;
 
-// include '.src/games/Calc.php';
-
 const ROUNDS_COUNT = 3;
 
 function sayHello()
@@ -31,8 +29,6 @@ function sayQuestion($question)
 
 function yesOrNo($bool)
 {
-
-    //$word = mb_strtolower($word);
     if ($bool === true) {
         return 'yes';
     }
@@ -68,7 +64,6 @@ function win($name)
 
 function beginGame($gameRules)
 {
-    line('test118');
     $name = sayHello();
     sayRules($gameRules);
     return $name;
