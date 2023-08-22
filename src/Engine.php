@@ -28,16 +28,15 @@ function sayQuestion(string $question)
 
 function yesOrNo(bool $bool)
 {
-    if ($bool === true) {
+    if ($bool == true) {
         return 'yes';
     }
-    if ($bool === false) {
+    if ($bool == false) {
         return 'no';
     }
-    return 'null';
 }
 
-function answerIsWrong(string $wrongAnswer, string $correctAnswer, $name)
+function answerIsWrong(string $wrongAnswer, string $correctAnswer, string $name)
 {
     line("'%s' is wrong answer ;(. Correct answer was '%s'", $wrongAnswer, $correctAnswer);
     line(" Let's try again, %s!", $name);
