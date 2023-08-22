@@ -2,7 +2,7 @@
 
 <?php
 
-use function Src\games\rime\runPrimeGame;
+use function Src\games\Prime\runPrimeGame;
 
 // Путь который будет использован при глобальной установке пакета
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
