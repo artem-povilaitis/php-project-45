@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\games\gcd;
+namespace BrainGames\Games\gcd;
 
 use function BrainGames\Engine\playGame;
 
@@ -15,22 +15,18 @@ function gcd(int $x, int $y)
     return gcd($y, $x % $y);
 }
 
-function runGcdGame()
+function runGcd()
 {
     $gameData = [];
     $gameRules = 'Find the greatest common divisor of given numbers.';
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $gameData[$i] = createGcdRound();
+        $a = rand(1, 100);
+        $b = rand(1, 100);
+        $output = [];
+        $output['question'] = $a . ' ' . $b;
+        $output['correctAnswer'] = gcd($a, $b);
+
+        $gameData[$i] = $output;
     }
     playGame($gameData, $gameRules);
-}
-function createGcdRound()
-{
-
-    $a = rand(1, 100);
-    $b = rand(1, 100);
-    $output = [];
-    $output['question'] = $a . ' ' . $b;
-    $output['correctAnswer'] = gcd($a, $b);
-    return $output;
 }

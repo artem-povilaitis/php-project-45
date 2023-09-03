@@ -3,9 +3,6 @@
 install:
 	composer install
 
-build:
-	composer install
-
 validate:
 	composer validate
 

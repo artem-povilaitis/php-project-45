@@ -2,7 +2,7 @@
 
 <?php
 
-use function Src\games\Calc\RunCalcGame;
+use function BrainGames\games\Calc\runCalc;
 
 // Путь который будет использован при глобальной установке пакета
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
@@ -15,4 +15,4 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-BrainGames\games\Calc\RunCalcGame();
+runCalc();
