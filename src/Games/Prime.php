@@ -31,7 +31,7 @@ function runPrime()
         $output = [];
 
         $output['question'] = $number;
-        $output['correctAnswer'] = isEven($number) ? 'yes' : 'no';
+        $output['correctAnswer'] = isPrime($number) ? 'yes' : 'no';
         $gameData[] = $output;
     }
     playGame($gameData, $gameRules);
