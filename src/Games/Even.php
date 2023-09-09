@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games\Even;
+namespace BrainGames\src\Games\Even;
 
 use function BrainGames\Engine\playGame;
 

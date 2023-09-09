@@ -1,6 +1,7 @@
 {
     "name": "hexlet/code",
     "description": "its edu project",
+    "license": "proprietary",
     "autoload": {
 
         "files": [

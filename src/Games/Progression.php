@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games\Progression;
+namespace BrainGames\src\Games\Progression;
 
 use function BrainGames\Engine\playGame;
 
@@ -24,7 +24,6 @@ function runProgression()
     $gameData = [];
     $gameRules = 'What number is missing in the progression?';
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
-
         $progression = createProgression();
 
         $keyOfElement = array_rand($progression);

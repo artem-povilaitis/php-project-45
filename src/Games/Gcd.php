@@ -1,18 +1,18 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games\gcd;
+namespace BrainGames\src\Games\gcd;
 
 use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function gcd(int $num1, int $num2)
+function findGCD(int $num1, int $num2)
 {
     if ($num2 == 0) {
         return $num1;
     }
-    return gcd($num2, $num1 % $num2);
+    return findGCD($num2, $num1 % $num2);
 }
 
 function runGcd()
@@ -24,7 +24,7 @@ function runGcd()
         $num2 = rand(1, 100);
         $output = [];
         $output['question'] = $num1 . ' ' . $num2;
-        $output['correctAnswer'] = gcd($num1, $num2);
+        $output['correctAnswer'] = findGCD($num1, $num2);
 
         $gameData[] = $output;
     }

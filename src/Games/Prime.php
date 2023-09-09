@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games\Prime;
+namespace BrainGames\src\Games\Prime;
 
 use function BrainGames\Engine\playGame;
 

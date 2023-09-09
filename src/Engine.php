@@ -17,7 +17,6 @@ function playGame(array $gameData, string $gameRules)
     line($gameRules);
 
     foreach ($gameData as ['question' => $roundQuestion, 'correctAnswer' => $correctAnswer]) {
-
         line("Question: %s", $roundQuestion);
 
         $userAnswer = prompt('Your answer');

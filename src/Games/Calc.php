@@ -1,25 +1,24 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Games\Calc;
+namespace BrainGames\src\Games\Calc;
 
 use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
-function calculate ($num1, $num2, $arithmeticSymbol)
-{
-        switch ($arithmeticSymbol) {
-            case '+':
-                return $num1 + $num2;
-            case '-':
-                return $num1 - $num2;
-            case '*':
-                return $num1 * $num2;
-            default:
-                return null;
-        }
-        
 
+function calculate($num1, $num2, $arithmeticSymbol)
+{
+    switch ($arithmeticSymbol) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        default:
+            return null;
+    }
 }
 
 
