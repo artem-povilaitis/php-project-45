@@ -31,7 +31,7 @@ function playGame(array $gameData, string $gameRules)
         if ($userAnswer != $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'", $userAnswer, $correctAnswer);
             line(" Let's try again, %s!", $name);
-            return null;
+            return;
         }
         line("Correct!");
     }

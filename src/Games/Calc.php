@@ -11,27 +11,27 @@ function runCalc()
 {
     $gameData = [];
     $gameRules = 'What is the result of the expression?';
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $arithmeticSymbols = ['+', '-', '*'];
 
-        $a = rand(1, 100);
-        $b = rand(1, 100);
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
         $arithmeticSymbol = $arithmeticSymbols[array_rand($arithmeticSymbols)];
 
         switch ($arithmeticSymbol) {
             case '+':
-                $correctAnswer = $a + $b;
+                $correctAnswer = $num1 + $num2;
                 break;
             case '-':
-                $correctAnswer = $a - $b;
+                $correctAnswer = $num1 - $num2;
                 break;
             case '*':
-                $correctAnswer = $a * $b;
+                $correctAnswer = $num1 * $num2;
                 break;
         }
 
         $output = [];
-        $output['question'] = $a . ' ' . $arithmeticSymbol . ' ' . $b;
+        $output['question'] = "$num1 $arithmeticSymbol $num2";
         $output['correctAnswer'] = $correctAnswer;
 
 

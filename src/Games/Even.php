@@ -16,7 +16,7 @@ function runEven()
 {
     $gameData = [];
     $gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $number = rand(1, 100);
 
         $output = [];

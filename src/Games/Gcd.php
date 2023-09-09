@@ -19,12 +19,12 @@ function runGcd()
 {
     $gameData = [];
     $gameRules = 'Find the greatest common divisor of given numbers.';
-    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $a = rand(1, 100);
-        $b = rand(1, 100);
+    for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
         $output = [];
-        $output['question'] = $a . ' ' . $b;
-        $output['correctAnswer'] = gcd($a, $b);
+        $output['question'] = $num1 . ' ' . $num2;
+        $output['correctAnswer'] = gcd($num1, $num2);
 
         $gameData[$i] = $output;
     }
