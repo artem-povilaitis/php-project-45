@@ -6,6 +6,22 @@ namespace BrainGames\Games\Calc;
 use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+function calculate ($num1, $num2, $arithmeticSymbol)
+{
+        switch ($arithmeticSymbol) {
+            case '+':
+                return $num1 + $num2;
+            case '-':
+                return $num1 - $num2;
+            case '*':
+                return $num1 * $num2;
+            default:
+                return null;
+        }
+        
+
+}
+
 
 function runCalc()
 {
@@ -18,18 +34,7 @@ function runCalc()
         $num2 = rand(1, 100);
         $arithmeticSymbol = $arithmeticSymbols[array_rand($arithmeticSymbols)];
 
-        switch ($arithmeticSymbol) {
-            case '+':
-                $correctAnswer = $num1 + $num2;
-                break;
-            case '-':
-                $correctAnswer = $num1 - $num2;
-                break;
-            case '*':
-                $correctAnswer = $num1 * $num2;
-                break;
-        }
-
+        $correctAnswer = calculate($num1, $num2, $arithmeticSymbol);
         $output = [];
         $output['question'] = "$num1 $arithmeticSymbol $num2";
         $output['correctAnswer'] = $correctAnswer;
