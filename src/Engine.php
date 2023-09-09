@@ -8,11 +8,6 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function yesOrNo(bool $bool)
-{
-    return $bool ? 'yes' : 'no';
-}
-
 function playGame(array $gameData, string $gameRules)
 {
     line('Welcome to the Brain Games!');
@@ -21,9 +16,8 @@ function playGame(array $gameData, string $gameRules)
 
     line($gameRules);
 
-    foreach ($gameData as $roundData) {
-        $roundQuestion = $roundData['question'];
-        $correctAnswer = $roundData['correctAnswer'];
+    foreach ($gameData as ['question' => $roundQuestion, 'correctAnswer' => $correctAnswer]) {
+
         line("Question: %s", $roundQuestion);
 
         $userAnswer = prompt('Your answer');

@@ -33,7 +33,7 @@ function runProgression()
         $output['question'] = $outputString;
         $output['correctAnswer'] = $correctAnswer;
 
-        $gameData[$i] = $output;
+        $gameData[] = $output;
     }
     playGame($gameData, $gameRules);
 }

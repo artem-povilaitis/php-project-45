@@ -7,12 +7,12 @@ use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function gcd(int $x, int $y)
+function gcd(int $num1, int $num2)
 {
-    if ($y == 0) {
-        return $x;
+    if ($num2 == 0) {
+        return $num1;
     }
-    return gcd($y, $x % $y);
+    return gcd($num2, $num1 % $num2);
 }
 
 function runGcd()
@@ -26,7 +26,7 @@ function runGcd()
         $output['question'] = $num1 . ' ' . $num2;
         $output['correctAnswer'] = gcd($num1, $num2);
 
-        $gameData[$i] = $output;
+        $gameData[] = $output;
     }
     playGame($gameData, $gameRules);
 }

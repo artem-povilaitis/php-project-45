@@ -3,7 +3,7 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\{yesOrNo, playGame};
+use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -31,8 +31,8 @@ function runPrime()
         $output = [];
 
         $output['question'] = $number;
-        $output['correctAnswer'] = yesOrNo(isPrime($number));
-        $gameData[$i] = $output;
+        $output['correctAnswer'] = isEven($number) ? 'yes' : 'no';
+        $gameData[] = $output;
     }
     playGame($gameData, $gameRules);
 }

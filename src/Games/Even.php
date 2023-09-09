@@ -3,7 +3,7 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\{yesOrNo, playGame};
+use function BrainGames\Engine\playGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
@@ -21,9 +21,9 @@ function runEven()
 
         $output = [];
         $output['question'] = $number;
-        $output['correctAnswer'] = yesOrNo(isEven($number));
+        $output['correctAnswer'] = isEven($number) ? 'yes' : 'no';
 
-        $gameData[$i] = $output;
+        $gameData[] = $output;
     }
     playGame($gameData, $gameRules);
 }
